@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-QNC114M"
   DTS:CreatorName="DESKTOP-QNC114M\iavit"
-  DTS:DTSID="{345EDAB8-9B19-45F5-B5AE-EE2DD3B92FB3}"
+  DTS:DTSID="{4D21810C-3FC6-4514-B52F-52ADA96C1A86}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="14.0.3002.107"
   DTS:LocaleID="1033"
-  DTS:ObjectName="0_BulkInsert"
+  DTS:ObjectName="01_BulkInsert"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{309E54D7-C8C5-4465-9171-19A6D7313481}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{C10930DA-D67A-4A06-B1E7-9CB50842D6FA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
