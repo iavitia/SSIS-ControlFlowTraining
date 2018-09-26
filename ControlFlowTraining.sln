@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "ControlFlowTraining", "ControlFlowTraining\ControlFlowTraining.dtproj", "{E7A84C53-4697-4CC6-9A5B-242A052027D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7A84C53-4697-4CC6-9A5B-242A052027D8}.Development|Default.ActiveCfg = Development
+		{E7A84C53-4697-4CC6-9A5B-242A052027D8}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {517AF51D-8068-4CD8-B4BE-42F10556A264}
+	EndGlobalSection
+EndGlobal
