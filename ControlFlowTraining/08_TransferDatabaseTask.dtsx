@@ -1,0 +1,86 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/16/2018 11:48:24 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-QNC114M"
+  DTS:CreatorName="DESKTOP-QNC114M\iavit"
+  DTS:DTSID="{3C52C178-3792-4EC4-924D-A62BA6AA8615}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3002.113"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="08_TransferDatabaseTask"
+  DTS:PackageType="5"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{2A6DF58A-E02B-46AA-9A9B-2285C1718872}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-QNC114M\INSTALLEDDEMO]"
+      DTS:CreationName="SMOServer"
+      DTS:DTSID="{1A515D08-342E-4E15-BFD9-7EAF56CF2F1C}"
+      DTS:ObjectName="DESKTOP-QNC114M\INSTALLEDDEMO">
+      <DTS:ObjectData>
+        <SMOServerConnectionManager
+          ConnectionString="SqlServerName=DESKTOP-QNC114M\INSTALLEDDEMO;UseWindowsAuthentication=True;UserName=;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-QNC114M\WWISERVER]"
+      DTS:CreationName="SMOServer"
+      DTS:DTSID="{625586C6-E51E-409D-8538-A5724A7C66DB}"
+      DTS:ObjectName="DESKTOP-QNC114M\WWISERVER">
+      <DTS:ObjectData>
+        <SMOServerConnectionManager
+          ConnectionString="SqlServerName=DESKTOP-QNC114M\WWISERVER;UseWindowsAuthentication=True;UserName=;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Transfer Database Task"
+      DTS:CreationName="Microsoft.TransferDatabaseTask"
+      DTS:Description="Transfer Database Task"
+      DTS:DTSID="{9BACBFE2-7E01-432A-BBD7-76F3370A260B}"
+      DTS:ExecutableType="Microsoft.TransferDatabaseTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Transfer Database Task"
+      DTS:TaskContact="Transfer Database Task; Microsoft Corporation; SQL Server 2017 RC1; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <TransferDatabasesTaskData
+          SrcConn="{1A515D08-342E-4E15-BFD9-7EAF56CF2F1C}"
+          DestConn="{625586C6-E51E-409D-8538-A5724A7C66DB}"
+          Method="1"
+          SrcDBName="SimpleTransfer"
+          SrcDBFiles="&quot;SimpleTransfer.mdf&quot;,&quot;C:\Program Files\Microsoft SQL Server\MSSQL14.INSTALLEDDEMO\MSSQL\DATA&quot;,&quot;&quot;;&quot;SimpleTransfer_log.ldf&quot;,&quot;C:\Program Files\Microsoft SQL Server\MSSQL14.INSTALLEDDEMO\MSSQL\DATA&quot;,&quot;&quot;"
+          DestDBName="SimpleTransfer"
+          DestDBFiles="&quot;SimpleTransfer.mdf&quot;,&quot;C:\Users\iavit\Documents\Projects\SSIS Outputs\databases&quot;,&quot;&quot;;&quot;SimpleTransfer_log.ldf&quot;,&quot;C:\Users\iavit\Documents\Projects\SSIS Outputs\databases&quot;,&quot;&quot;"
+          DestOverwrite="True" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="190.4,41.6"
+          Id="Package\Transfer Database Task"
+          TopLeft="5.5,5.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
