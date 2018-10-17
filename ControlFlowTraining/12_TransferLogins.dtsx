@@ -1,0 +1,91 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/17/2018 1:40:45 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-QNC114M"
+  DTS:CreatorName="DESKTOP-QNC114M\iavit"
+  DTS:DTSID="{8B19D360-EFBE-4DCE-B795-CFCE6AA67352}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3002.113"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="12_TransferLogins"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{896AF329-B7CB-4351-ADAC-E8362D3D36B5}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-QNC114M\INSTALLEDDEMO]"
+      DTS:CreationName="SMOServer"
+      DTS:DTSID="{E3BFA842-EAE7-46EB-9518-9EA438527FC6}"
+      DTS:ObjectName="DESKTOP-QNC114M\INSTALLEDDEMO">
+      <DTS:ObjectData>
+        <SMOServerConnectionManager
+          ConnectionString="SqlServerName=DESKTOP-QNC114M\INSTALLEDDEMO;UseWindowsAuthentication=True;UserName=;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-QNC114M\INSTALLEDDEMO 1]"
+      DTS:CreationName="SMOServer"
+      DTS:DTSID="{65E681C6-F4F4-40CF-B6E9-6CA71EBA3ADB}"
+      DTS:ObjectName="DESKTOP-QNC114M\INSTALLEDDEMO 1">
+      <DTS:ObjectData>
+        <SMOServerConnectionManager
+          ConnectionString="SqlServerName=DESKTOP-QNC114M\INSTALLEDDEMO;UseWindowsAuthentication=True;UserName=;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-QNC114M\WWISERVER]"
+      DTS:CreationName="SMOServer"
+      DTS:DTSID="{F3B1C84D-5355-41CA-B0BA-B6EE7D8A5D66}"
+      DTS:ObjectName="DESKTOP-QNC114M\WWISERVER">
+      <DTS:ObjectData>
+        <SMOServerConnectionManager
+          ConnectionString="SqlServerName=DESKTOP-QNC114M\WWISERVER;UseWindowsAuthentication=True;UserName=;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Transfer Logins Task"
+      DTS:CreationName="Microsoft.TransferLoginsTask"
+      DTS:Description="Transfer Logins Task"
+      DTS:DTSID="{73898C5B-410D-4F31-BDDB-CB4AF8DBA58A}"
+      DTS:ExecutableType="Microsoft.TransferLoginsTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Transfer Logins Task"
+      DTS:TaskContact="Transfer Error Messages Task; Microsoft Corporation; SQL Server 2017 RC1; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <TransferLoginsTaskData
+          LoginList="1,9,LoginDemo,"
+          SourceConnection="{F3B1C84D-5355-41CA-B0BA-B6EE7D8A5D66}"
+          DestinationConnection="{65E681C6-F4F4-40CF-B6E9-6CA71EBA3ADB}" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="176,41.6"
+          Id="Package\Transfer Logins Task"
+          TopLeft="5.5,5.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
